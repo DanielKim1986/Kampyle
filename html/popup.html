@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="../css/popup.css" />
+<script type="text/javascript" src="../js/highcharts.js"></script>
+<script type="text/javascript" src="../js/popup.js"></script>
+<title>KAMPYLE Popup</title>
+</head>
+<body>
+  <div class="header">
+		<div class="left logo-image"></div>
+		<div id="logout" class="right logout"><i class="fa fa-sign-out" aria-hidden="true" style="cursor:pointer;"></i></div>
+	</div>
+	<div class="loading"><img src="../icons/ajax-loader.gif" class="ajax-loader"></div>
+  <div class="wrapper-login">
+    <label>Please enter your email address and password to log in<label>
+		<input name="email" type="text" class="form-text" autocomplete="off" placeholder="Enter your email address" size="50" id="mail"/>
+    <input name="password" type="password" class="form-text" autocomplete="off" placeholder="Enter a password" size="50" id="password"/>
+		<div class="error"><span class="error-message">Wrong email address or password</span></div>
+		<input type="button" class="button" id="login" value="Login">
+  </div>
+  <div class="wrapper-overview">
+		<div id="tabs-container">
+			<ul class="tabs-menu">
+					<li class="current"><a href="#tab-1"><i class="fa fa-binoculars" aria-hidden="true" style="display:block;font-size:28px;"></i>Overview</a></li>
+			</ul>
+			<div class="tab">
+				<div id="tab-1" class="tab-content">
+					<div class="feedback-container">
+						<div class="left score">
+							<span class="inherit feedback-title">Total Feedback</span>
+							<span id = "total-feedback" class="inherit feedback-score"></span>
+						</div>
+						<div class="center score">
+							<span class="inherit feedback-title">Average CSAT</span>
+							<span id = "average-csat" class="inherit feedback-score"></span>
+						</div>
+						<div class="right score">
+							<span class="inherit feedback-title">Net Promoter Score</span>
+							<span id = "promoter-score" class="inherit feedback-score"></span>
+						</div>
+					</div>
+					<label class="label-feedback">Feedback Activity</label>
+					<label class="label-last">last 30 days</label>
+					<div id="container" style="width: 675px; height: 220px; margin: 0 auto;"></div>
+				</div>
+			</div>
+		</div>
+  <div>
+</body>
+</html>
